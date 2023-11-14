@@ -10,7 +10,7 @@ Welcome to QSimov Cloud Client's documentation!
    :caption: Manual:
 
    getting_started
-   
+   metrics
    
 .. toctree::
    :maxdepth: 2   

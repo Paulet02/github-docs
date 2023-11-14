@@ -19,6 +19,7 @@ release = '0.0.1'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
+bibtex_bibfiles = ["references.bib"]
 
 extensions = [
     'sphinx.ext.autodoc',
@@ -28,7 +29,8 @@ extensions = [
     'sphinx.ext.doctest',
     'sphinx.ext.autosummary',
     'sphinx.ext.viewcode',
-    'nbsphinx'
+    'nbsphinx',
+    'sphinxcontrib.bibtex'
 ]
 
 templates_path = ['_templates']
