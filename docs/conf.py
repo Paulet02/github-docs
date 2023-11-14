@@ -15,6 +15,13 @@ copyright = '2023, QSimov Quantum Computing S.L.'
 author = 'QSimov Quantum Computing S.L.'
 release = '0.0.1'
 
+
+import mock
+
+MOCK_MODULES = ['numpy', 'sympy', 'json', 'logging', 're', 'requests']
+for mod_name in MOCK_MODULES:
+    sys.modules[mod_name] = mock.Mock()
+
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
