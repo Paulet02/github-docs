@@ -18,7 +18,7 @@ release = '0.0.1'
 
 import mock
 
-MOCK_MODULES = ['numpy', 'sympy', 'json', 'logging', 're', 'requests', 'requests.exceptions', 'requests.packages']
+MOCK_MODULES = ['numpy', 'sympy', 'json', 'logging', 're', 'requests', 'requests.exceptions', 'requests.packages', 'requests.packages.urllib3']
 for mod_name in MOCK_MODULES:
     sys.modules[mod_name] = mock.Mock()
 
