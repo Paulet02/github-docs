@@ -6,6 +6,7 @@ In this section, we explore various binary distance measures that are widely use
 .. list-table:: 
    :widths: 25 25 25
    :header-rows: 1
+   :align: center
 
    * - 
      - **1 (Presence in x)**
@@ -45,6 +46,7 @@ To use the Hamming distance metric to generate a quantum superposition, ensure t
 	client.set_metric("hamming")
 	client.set_state(state_bin='0111010')
 	client.set_range(["0", "3"])
+	client.can_have_nan(False)
 	client.set_ancilla_mode("clean")
 
 	# Generate a quantum circuit
@@ -57,3 +59,6 @@ The presented code facilitates the creation of a quantum superposition within th
 
 .. image:: /_static/hamming_plot.svg
 	
+.. note::
+
+	The reference state is highlighted in nova mint color.

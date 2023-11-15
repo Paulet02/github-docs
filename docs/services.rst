@@ -34,6 +34,10 @@ This service calculates the extra ancilla qubits needed for the quantum circuit 
 		- `min_range` (str): Minimum range for distance calculations (included).
 		- `max_range` (str): Maximum range for distance calculations (included).
 		
+	And
+	
+		- `with_nan` (bool): Specify whether NaN (0/0) values are inclided in the superposition.
+		
 		
 **Example Usage:**
 
@@ -135,6 +139,9 @@ This service genenerates the superposition quantum circuit in OpenQASM :cite:`cr
 		- `min_range` (str): Minimum range for distance calculations (included).
 		- `max_range` (str): Maximum range for distance calculations (included).
 		
+	And
+	
+		- `with_nan` (bool): Specify whether NaN (0/0) values are inclided in the superposition.
 		
 **Example Usage:**
 
@@ -149,6 +156,7 @@ This service genenerates the superposition quantum circuit in OpenQASM :cite:`cr
 	client.set_metric("hamming")
 	client.set_state(num_qubits=5, state=2)
 	client.set_distances(["1", "3"])
+	client.can_have_nan(False)
 	client.set_ancilla_mode("noancilla")
 
 	# Generate a quantum circuit
@@ -196,6 +204,10 @@ This service calculates the total number of superposed states in the circuit bas
 	
 		- `min_range` (str): Minimum range for distance calculations (included).
 		- `max_range` (str): Maximum range for distance calculations (included).
+		
+	And
+	
+		- `with_nan` (bool): Specify whether NaN (0/0) values are inclided in the superposition.
 		
 		
 **Example Usage:**

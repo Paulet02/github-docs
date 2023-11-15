@@ -6,6 +6,7 @@ In this section, we explore various binary similarity measures that are widely u
 .. list-table:: 
    :widths: 25 25 25
    :header-rows: 1
+   :align: center
 
    * - 
      - **1 (Presence in x)**
@@ -43,6 +44,7 @@ To use the **Ample** similarity metric to generate a quantum superposition, ensu
 	client.set_metric("ample")
 	client.set_state(state_bin='0111010')
 	client.set_range(["9/4", "inf"])
+	client.can_have_nan(False)
 	client.set_ancilla_mode("clean")
 
 	# Generate a quantum circuit
@@ -89,6 +91,7 @@ To use the **Cosine** similarity metric to generate a quantum superposition, ens
 	client.set_metric("cosine")
 	client.set_state(state_bin='0111010')
 	client.set_range(["1/7", "1/4"])
+	client.can_have_nan(False)
 	client.set_ancilla_mode("clean")
 
 	# Generate a quantum circuit
@@ -135,6 +138,7 @@ To use the **Simpson** similarity metric to generate a quantum superposition, en
 	client.set_metric("simpson")
 	client.set_state(state_bin='0111010')
 	client.set_range(["2/3", "1"])
+	client.can_have_nan(False)
 	client.set_ancilla_mode("clean")
 
 	# Generate a quantum circuit
@@ -178,6 +182,7 @@ To use the **Johnson** similarity metric to generate a quantum superposition, en
 	client.set_metric("johnson")
 	client.set_state(state_bin='0111010')
 	client.set_range(["27/20", "2"])
+	client.can_have_nan(False)
 	client.set_ancilla_mode("clean")
 
 	# Generate a quantum circuit
@@ -220,6 +225,7 @@ To use the **Pearson I** similarity metric to generate a quantum superposition, 
 	client.set_metric("pearson_i")
 	client.set_state(state_bin='0111010')
 	client.set_range(["21/10", "7"])
+	client.can_have_nan(False)
 	client.set_ancilla_mode("clean")
 
 	# Generate a quantum circuit
@@ -264,6 +270,7 @@ To use the **Jaccard** similarity metric to generate a quantum superposition, en
 	client.set_metric("jaccard")
 	client.set_state(state_bin='0111010')
 	client.set_range(["1/2", "1"])
+	client.can_have_nan(False)
 	client.set_ancilla_mode("clean")
 
 	# Generate a quantum circuit
@@ -306,6 +313,7 @@ To use the **Dice** similarity metric to generate a quantum superposition, ensur
 	client.set_metric("dice")
 	client.set_state(state_bin='0111010')
 	client.set_range(["4/7", "1"])
+	client.can_have_nan(False)
 	client.set_ancilla_mode("clean")
 
 	# Generate a quantum circuit

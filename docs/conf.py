@@ -3,9 +3,9 @@
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
-import os
 import sys
-sys.path.insert(0, os.path.abspath('..'))
+
+sys.path.append('..')
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
@@ -20,7 +20,6 @@ release = '0.0.1'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 bibtex_bibfiles = ["references.bib"]
-
 
 extensions = [
     'sphinx.ext.autodoc',
@@ -46,6 +45,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 html_logo = "_static/QSimov.svg"
+html_css_files = ["custom.css"]
 
 html_theme_options = {
     "collapse_navigation": True

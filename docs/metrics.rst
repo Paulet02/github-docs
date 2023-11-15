@@ -28,6 +28,7 @@ Below is a table summarizing the nomenclature used:
 .. list-table:: 
    :widths: 25 25 25
    :header-rows: 1
+   :align: center
 
    * - 
      - **1 (Presence in x)**
