@@ -11,6 +11,8 @@ Welcome to QSimov Cloud Client's documentation!
 
    getting_started
    metrics
+   services
+   references
    
 .. toctree::
    :maxdepth: 2   

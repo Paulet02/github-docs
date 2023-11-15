@@ -4,3 +4,4 @@ numpy
 sympy
 requests
 sphinxcontrib-bibtex
+sphinx-copybutton

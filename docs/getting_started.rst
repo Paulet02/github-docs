@@ -1,3 +1,54 @@
+.. _getting_started:
+
+Getting Started
+===============
+
+Installation
+------------
+
+To use the QsimovCloudClient in your Python projects, follow these installation steps:
+
+1. **Install QsimovCloudClient:**
+
+   You can install QsimovCloudClient using `pip`:
+
+   .. code-block:: shell
+
+      pip install qsimov-cloud-client
+
+Basic Usage
+-----------
+
+Now that you have QsimovCloudClient installed, you can use it in your projects. Here's a simple example:
+
+.. code-block:: python
+
+   from qsimov_cloud_client import QsimovCloudClient
+
+   # Initialize QsimovCloudClient with your access token
+   client = QsimovCloudClient("your_access_token")
+
+   # Set the metric
+   client.set_metric("hamming")
+
+   # Set other parameters as needed
+
+   # Perform a calculation
+   result = client.calculate_distance_range()
+
+   # Access the result
+   print("Distance Range:", result)
+
+   # Additional usage examples can be found in the documentation.
+
+.. note::
+
+   Make sure to replace "your_access_token" with your actual Qsimov access token.
+
+For more detailed information and advanced usage, refer to the full documentation.
+
+
+
 Getting Started
 ===============
 

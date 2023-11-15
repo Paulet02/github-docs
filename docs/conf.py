@@ -21,6 +21,7 @@ release = '0.0.1'
 
 bibtex_bibfiles = ["references.bib"]
 
+
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.napoleon',
@@ -30,7 +31,8 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.viewcode',
     'nbsphinx',
-    'sphinxcontrib.bibtex'
+    'sphinxcontrib.bibtex',
+    'sphinx_copybutton'
 ]
 
 templates_path = ['_templates']
