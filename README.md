@@ -1,4 +1,6 @@
-![Qsimov Logo](docs/_static/QSimov_dark.svg)
+<p align="center">
+  <img src="docs/_static/QSimov_dark.svg" alt="Qsimov Logo" width="500"/>
+</p>
 
 # Unlock Quantum Potential with Neighborhood Quantum Superposition!
 
