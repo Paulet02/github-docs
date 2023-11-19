@@ -12,7 +12,11 @@ Let's consider the MaxCut optimization problem, a classic challenge in combinato
 
 ### QAOA Standard Approach
 
-In the standard QAOA implementation [1], we apply the algorithm to solve the MaxCut problem. The results demonstrate a certain number of iterations needed to reach a satisfactory solution. The process is:
+In the standard QAOA implementation [1], we apply the algorithm to solve the MaxCut problem. The results demonstrate a certain number of iterations needed to reach a satisfactory solution. The scheme and the process is:
+
+<p align="center">
+  <img src="QAOA.png" alt="QAOA" width="600"/>
+</p>
 
 | Iter | β                       | γ                      | f(X)                   |
 |------|-------------------------|------------------------|------------------------|
@@ -52,7 +56,7 @@ In the standard QAOA implementation [1], we apply the algorithm to solve the Max
 |  34  | 1.2825180709518797517  | 1.0989489694823890709 | -8.7050781250000000000 |
 |  35  | 1.2825180709518797517  | 1.0989489694823890709 | -8.7050781250000000000 |
 
-As we can see, after 35 iterations we obtain the solution 01101110(110) with a value -9:
+As we can see, after 35 iterations we obtain the solution **01101110(110)** with a value **-9**:
 
 <p align="center">
   <img src="qaoa_solution.png" alt="QAOA Solution" width="500"/>
@@ -60,7 +64,11 @@ As we can see, after 35 iterations we obtain the solution 01101110(110) with a v
 
 ### QAOA with Neighborhood Quantum Superposition
 
-Now, let's introduce Neighborhood Quantum Superposition into the QAOA algorithm. By applying superpositions over a carefully selected subset of states, our product modifies the initial state preparation and the mixing operator. The modification of the QAOA algorithm is based on [3]. The new process followed by the new approach is:
+Now, let's introduce Neighborhood Quantum Superposition into the QAOA algorithm. By applying superpositions over a carefully selected subset of states (Hamming distance from 11110000 state and a range between 1 and 3), our product modifies the initial state preparation and the mixing operator. The modification of the QAOA algorithm is based on [3]. The new process followed by the new approach is:
+
+<p align="center">
+  <img src="GM-QAOA.png" alt="GM-QAOA" width="600"/>
+</p>
 
 | Iter | β                       | γ                      | f(X)                   |
 |------|-------------------------|------------------------|------------------------|
@@ -97,7 +105,7 @@ Now, let's introduce Neighborhood Quantum Superposition into the QAOA algorithm.
 |  31  | 2.2409012486465313962  | 3.0251683849848753916 | -9.2910156250000000000 |
 |  32  | 2.2409012486465313962  | 3.0251683849848753916 | -9.2910156250000000000 |
 
-As we can see, after 32 iterations we obtain the solution 00111000(56) with a value -12:
+As we can see, after 32 iterations we obtain the solution **00111000(56)** with a value **-12**:
 
 <p align="center">
   <img src="gm_qaoa_solution.png" alt="QAOA Solution" width="500"/>
@@ -109,13 +117,12 @@ The results speak for themselves. With Neighborhood Quantum Superposition, the M
 
 This is a very simple use case, the parts of the algorithm where one can investigate and reduce the algorithm's complexity are:
 
-- Number of layers of the algorithm.
-- Number of shots.
-- The metric used.
-- The problem domain size.
-- The mixing operator.
-- The heuristic for the reference state.
-
+- Number of **layers** of the algorithm.
+- Number of **shots**.
+- The **metric** used.
+- The **problem domain size**.
+- The **mixing operator**.
+- The **heuristic** for the reference state.
 
 
 ## Investment Opportunity
@@ -123,3 +130,16 @@ This is a very simple use case, the parts of the algorithm where one can investi
 Investing in Neighborhood Quantum Superposition opens the door to revolutionary advancements in quantum algorithm performance. As demonstrated in the MaxCut optimization example, our product has the potential to significantly reduce computational resources while enhancing the quality of solutions. We provide the tools, you create the magic. Unlock the limitless potential of our product to elevate your ideas to new heights.
 
 For more details, visit [QSimov](https://qsimov-cloud-client.readthedocs.io/en/latest/).
+
+## References
+
+[1] Farhi, Edward, Jeffrey Goldstone, and Sam Gutmann. ["A quantum approximate optimization algorithm"][qaoa]. *arXiv preprint* arXiv:1411.4028 (2014). 
+
+[2] Qiskit Community Tutorials. ["Solving Combinatorial Optimization Problems using QAOA"][qaoa-tutorial].
+
+[3] Bartschi, A., & Eidenbenz, S. (2020, October). ["Grover Mixers for QAOA: Shifting Complexity from Mixer Design to State Preparation"][gm-qaoa]. In 2020 IEEE International Conference on Quantum Computing and Engineering (QCE) (pp. 1-10). IEEE. DOI: 10.1109/qce49297.2020.00020 
+
+
+[qaoa]: https://arxiv.org/abs/1411.4028
+[qaoa-tutorial]: https://learn.qiskit.org/course/ch-applications/solving-combinatorial-optimization-problems-using-qaoa
+[gm-qaoa]: https://arxiv.org/abs/2006.00354
