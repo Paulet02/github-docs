@@ -37,7 +37,7 @@ Qsimov Cloud Client is a tool designed to facilitate interaction with Qsimov's *
 To install the Qsimov Python Client, use the following pip command:
 
 ```bash
-pip install qsimov-client
+pip install qsimov-cloud-client
 ```
 
 ### Basic Usage
